@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Timeline User Interface Demo</title>
+    <script src="lib\jquery-1.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib\jquery.kinetic.js" type="text/javascript" charset="utf-8"></script>
+    <script src="UI.js" type="text/javascript" charset="utf-8"></script>
+    <link href="UI.css" rel="stylesheet" type="text/css"></link>
+  </head>
+  <body onload="init();">
+    <div id="wrapper">
+      <div id="leftSideBar">
+        <div id="topBlank" >Time</div>
+        <div id="networkDataTitle">
+          <span class="caption" id="networkCaption">Network</span>
+          <div class="container hidden" id="networkDivisions">
+            <span class="caption">Request Sent</span>
+            <span class="caption">Response Received</span>
+            <span class="caption">Errors</span>
+            <span class="caption">Warnings</span>
+          </div>
+        </div>
+        <div id="contentDataTitle">
+          <span class="caption" id="contentCaption">Content</span>
+          <div class="container hidden" id="contentDivisions">
+            <span class="caption">Paint Started</span>
+            <span class="caption">Paint Complete</span>
+            <span class="caption">Errors</span>
+            <span class="caption">Warnings</span>
+          </div>
+        </div>
+      </div>
+      <div id="timelineContainer">
+        <canvas id="timelineRuler" width="2000" height="50"></canvas>
+        <canvas id="timelineCanvas" width="2000" height="400"></canvas>
+      </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      $('#timelineContainer').kinetic({
+        triggerHardware: true
+      });
+    </script>
+
+  </body>
+</html>

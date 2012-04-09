@@ -288,7 +288,7 @@ function highlightElement(x,y) {
     var top = (networkOpened? Math.floor(y/(400/networkTimeline.length))*(400/networkTimeline.length)
                             : Math.floor(y/(400/contentTimeline.length))*(400/contentTimeline.length));
     var topOffset = networkOpened?Math.floor(y/(400/networkTimeline.length)):Math.floor(y/(400/contentOpened.length));
-    var width = !itemList[id][1]?10/1000*pixelPerSecond:(itemList[id][1]-itemList[id][0])/1000*pixelPerSecond;
+    var width = !itemList[id][1]?10:(itemList[id][1]-itemList[id][0])/1000*pixelPerSecond;
     var height = networkOpened? 400/networkTimeline.length: 400/contentTimeline.length;
     height -= 10;
     $("#overlayDiv").animate( {

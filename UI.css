@@ -81,3 +81,10 @@ body {
 .hidden {
   display: none;
 }
+.overlay {
+  position: absolute;
+  opacity: 0;
+  border: 1px solid highlight;
+  background-color: highlight;
+  -moz-pack: center;
+}
